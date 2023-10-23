@@ -106,8 +106,11 @@ H1 : M1!= M2
 # Adım 2: Kontrol ve test grubu için purchase(kazanç) ortalamalarını analiz ediniz
 df[df["group"] == "control"].mean() #control grubunda daha az reklam goruntulenmesıne ragmen daha cok tıklama almıştır
                                     #bu durum kontrol grubundaki musterılere daha dogru reklam cıkartıldıgının gostergesi olabilir.
-
 df[df["group"] == "test"].mean()
+
+df.loc[df["group"] == "control", "Purchase"].mean()
+df.loc[df["group"] == "test", "Purchase"].mean()
+
 #####################################################
 # GÖREV 3: Hipotez Testinin Gerçekleştirilmesi
 #####################################################
